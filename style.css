@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+#quiz, #user-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#quiz:hover, #user-form:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d3748;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz Info Styles */
+.quiz-info {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 5px solid #4CAF50;
+}
+
+.info-text {
+    font-size: 1.2em;
+    color: #2d3748;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.quiz-details {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+.quiz-details li {
+    color: #4a5568;
+    margin: 10px 0;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.instructions {
+    color: #666;
+    text-align: center;
+    font-style: italic;
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+h2 {
+    margin: 0 0 25px;
+    color: #4a5568;
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 20px 0;
+    background-color: #f7fafc;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #edf2f7;
+    transform: translateX(10px);
+}
+
+ul li label {
+    cursor: pointer;
+    padding-left: 15px;
+    color: #4a5568;
+    font-size: 1.1em;
+    display: inline-block;
+    width: calc(100% - 30px);
+}
+
+.answer {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+button {
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(to right, #45a049, #3d8b40);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Custom radio button styling */
+.answer {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    outline: none;
+    position: relative;
+}
+
+.answer:checked {
+    background-color: #4CAF50;
+}
+
+.answer:checked::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Score display styling */
+#quiz h2:only-child {
+    text-align: center;
+    font-size: 1.8em;
+    color: #2d3748;
+    margin: 40px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    #quiz, #user-form {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .quiz-info {
+        padding: 15px;
+    }
+    
+    .info-text {
+        font-size: 1.1em;
+    }
+    
+    .quiz-details li {
+        font-size: 1em;
+    }
+    
+    ul li {
+        padding: 12px;
+    }
+    
+    button {
+        padding: 15px;
+    }
+    
+    .form-group input {
+        padding: 10px;
+    }
+}

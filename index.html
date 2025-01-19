@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="user-form">
+            <h1>Welcome to the Quiz</h1>
+            <div class="quiz-info">
+                <p class="info-text">🎯 Test your knowledge with our interactive quiz!</p>
+                <ul class="quiz-details">
+                    <li>✨ 4 Exciting Questions</li>
+                    <li>⏱️ No Time Limit</li>
+                    <li>📝 Instant Results</li>
+                    <li>🔄 Retry Option Available</li>
+                </ul>
+                <p class="instructions">Please fill in your details below to begin the quiz.</p>
+            </div>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" min="1" required>
+                </div>
+                <button type="submit">Start Quiz</button>
+            </form>
+        </div>
+        <div id="quiz" style="display: none;">
+            <h1>Quiz App</h1>
+            <div id="quiz-header">
+                <h2 id="question">Question text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Answer</label>
+                    </li>
+                </ul>
+            </div>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
